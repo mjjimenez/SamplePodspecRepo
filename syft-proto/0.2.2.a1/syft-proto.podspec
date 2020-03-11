@@ -65,7 +65,12 @@ Pod::Spec.new do |spec|
   #
 
   spec.platform     = :ios, "13.0"
-  spec.swift_versions = "5.0"
+
+  spec.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO' }
+  spec.ios.deployment_target = '13.0'
+  spec.swift_versions = '5.1.3'
+  spec.static_framework = true
+
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
